@@ -1,4 +1,56 @@
 # Client Task B #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+BEGIN WarehouseMappingApp
+
+    // Initialize the warehouse layout
+    SET warehouse AS 2D ARRAY (GRID) with size (10 x 10) // Example size
+    SET startLocation TO (0, 0) // Starting at the top-left corner
+    SET destinationLocation TO (5, 7) // Example destination
+
+    PRINT "Welcome to the Warehouse Mapping App!"
+    PRINT "You are at location (0, 0)."
+    PRINT "Your destination is at " + destinationLocation + "."
+
+    WHILE startLocation IS NOT EQUAL TO destinationLocation DO
+        PRINT "Enter your move (north, south, east, west):"
+        INPUT move
+
+        IF move IS "north" THEN
+            IF startLocation[0] > 0 THEN
+                DECREMENT startLocation[0] BY 1 // Move up
+            ELSE
+                PRINT "You can't move north!"
+            ENDIF
+
+        ELSE IF move IS "south" THEN
+            IF startLocation[0] < 9 THEN
+                INCREMENT startLocation[0] BY 1 // Move down
+            ELSE
+                PRINT "You can't move south!"
+            ENDIF
+
+        ELSE IF move IS "east" THEN
+            IF startLocation[1] < 9 THEN
+                INCREMENT startLocation[1] BY 1 // Move right
+            ELSE
+                PRINT "You can't move east!"
+            ENDIF
+
+        ELSE IF move IS "west" THEN
+            IF startLocation[1] > 0 THEN
+                DECREMENT startLocation[1] BY 1 // Move left
+            ELSE
+                PRINT "You can't move west!"
+            ENDIF
+
+        ELSE
+            PRINT "Invalid move! Please enter north, south, east, or west."
+        ENDIF
+
+        PRINT "You are now at location " + startLocation + "."
+
+    PRINT "Congratulations! You've reached your destination at " + destinationLocation + "."
+
+END WarehouseMappingApp
 
