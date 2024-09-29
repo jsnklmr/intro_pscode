@@ -1,4 +1,31 @@
 # Client Task A #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+BEGIN NumberGuessingGame
+
+    SET randomNumber TO RANDOM NUMBER BETWEEN 1 AND 10
+    SET attempts TO 3
+
+    PRINT "Welcome to the Number Guessing Game!"
+    PRINT "I have chosen a number between 1 and 10."
+    PRINT "You have 3 chances to guess it."
+
+    WHILE attempts > 0 DO
+        PRINT "You have " + attempts + " attempts left."
+        PRINT "Enter your guess: "
+        INPUT guess
+
+        IF guess EQUALS randomNumber THEN
+            PRINT "You guessed it! Well done!"
+            END GAME
+        ELSE IF guess < randomNumber THEN
+            PRINT "Your guess is too low. Try again."
+        ELSE
+            PRINT "Your guess is too high. Try again."
+
+        DECREASE attempts BY 1
+
+    PRINT "Sorry, you're out of attempts. The number was " + randomNumber + "."
+
+END NumberGuessingGame
 
