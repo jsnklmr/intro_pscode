@@ -1,4 +1,21 @@
 # Client Task C #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+BEGIN ProductPackageCounter
+
+    PRINT "Counting product packages from 2 to 50:"
+
+    // Initialize the starting point
+    SET number TO 2
+
+    // Loop until the number exceeds 50
+    WHILE number <= 50 DO
+        PRINT number // Print the current number
+
+        // Increment by 2 to count the next product package
+        INCREMENT number BY 2
+
+    ENDWHILE
+
+END ProductPackageCounter
 
